@@ -1,0 +1,77 @@
+{% extends 'admin/layout.njk'%}
+
+{% block head%}
+    <title>Foodfy/Admin - Edit</title>
+{% endblock%}
+
+{% block content%}
+    <section class="recipe-admin-edit-form">
+
+
+            <div class="edit-header-form">
+                
+                <h1>Editando receita</h1>
+                
+                <div class="edit-header-buttons">
+                    <form action="/admin/recipes?_method=DELETE" method="POST">
+                        <button type="submit" class="btn-delete">Delete</button>
+                        <input type="hidden" name="id" value="{{recipes.id}}">
+                    </form>
+
+        <form action="/admin/recipes?_method=PUT" method="POST">
+                        <button type="submit" class="btn-save-edit">Save recipe</button>                
+                        <input type="hidden" name="id" value="{{recipes.id}}">
+                </div>
+            </div>
+            
+            <p>Recipe image</p>
+            <input 
+                type="url" 
+                name="image" 
+                id=""
+                value="{{recipes.image}}"
+            >
+            
+            <p>Ingredients</p>
+            <div id="ingredients">
+                {% for ingredient in recipes.ingredients%}
+                    <div class="ingredient">
+                        <input 
+                            type="text" 
+                            name="ingredients[]" 
+                            placeholder="ingrediente"
+                            value="{{ingredient}}"
+                        >
+                    </div>
+                {% endfor%}
+            </div>
+            <button type="button" class="add-ingredient">Add new ingredient</button>
+            
+            <p>Preparation mode</p>
+            <div id="preparations">
+                {% for preparation in recipes.preparation %}
+                    <div class="preparation">
+                        <input 
+                            type="text" 
+                            name="preparation[]" 
+                            placeholder="preparation"
+                            value="{{preparation}}"
+                        >
+                    </div>
+                {% endfor%}
+            </div>
+            <button type="button" class="add-preparation">Add new preparation</button>
+            
+            <p>Additional information</p>
+            <textarea 
+                name="information" 
+                id="" 
+                cols="30" 
+                rows="10"
+                placeholder="Additional information"
+                wrap="hard"
+            >{{recipes.information}}</textarea>
+        </form>        
+    </section>
+    <script src="/scripts.js"></script>
+{%endblock%}

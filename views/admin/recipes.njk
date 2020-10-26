@@ -1,0 +1,25 @@
+{% extends 'admin/layout.njk' %}
+
+{% block head %}
+    <title>Foodfy/Admin - Recipes</title>
+{% endblock%}
+
+{% block content%}
+    <section class='recipes-section-admin'>
+        <h1>Recipes menagement</h1>
+
+        <div class='recipes-list-admin'>
+            {% for item in items%}
+            <div class='recipe-admin'>
+                <img src="{{item.image}}" alt='imagem de {{item.title}}'>
+                <div class='recipe-author-view'>
+                    <h2>{{item.title}}</h2>
+                    <h3>por {{item.author}}</h3>
+                    <div class='view-recipe'><a href="/admin/recipes/{{items.indexOf(item)}}">View</a></div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+
+    </section>
+{% endblock %}

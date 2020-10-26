@@ -1,0 +1,271 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #111111;
+}
+
+.menu-admin {
+    background-color: #111111;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-admin #menu-items {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.recipe-admin img {
+    width: 172px;
+    height: 80px;
+    border-radius: 8.5px;
+    object-fit: cover;
+}
+
+.recipe-admin {
+    display: grid;
+    grid-template-columns: 172px max-content;
+    gap: 20px;
+}
+
+.recipes-section-admin {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.recipes-section-admin h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.recipes-list-admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.recipe-author-view h3 {
+    font-weight: normal;
+    font-size: 14px;
+    color: #777777;
+    margin-top: 5px;
+}
+
+.recipe-author-view h2 {
+    font-size: 18px;
+}
+
+
+.view-recipe a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    margin-top: 10px;
+}
+
+.view-recipe {
+    margin-top: 10px;
+}
+
+.recipe-detail-admin {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.recipe-detail-admin img {
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 940px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.recipe-detail-header {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.btn-edit-recipe {
+    background-color: #6558C3;
+    width: 136px;
+    height: 37px;
+    justify-self: end;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-recipe-admin {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.author-recipe-admin {
+    font-size: 20px;
+    font-weight: normal;
+    color: #777777;
+    margin-top: 4px;
+}
+
+.titles-recipes {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 31px;
+}
+
+.ingredients-items-admin {
+    margin-top: 19px;
+}
+
+.recipe-detail-admin:last-child {
+    margin-bottom: 50px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 49px;
+    border: solid 1px #DDDDDD;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.recipe-admin-edit-form input {
+    display: block;
+    height: 49px;
+    border: solid 1px #DDDDDD;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.edit-header-form h1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.edit-header-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-top: 50px;
+    margin-bottom: 26px;
+}
+
+.recipe-admin-edit-form {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.edit-header-buttons {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-delete {
+    background-color: #DC4747;
+    width: 92px;
+    height: 37px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.btn-save-edit {
+    background-color: #6558C3;
+    width: 139px;
+    height: 37px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+p {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+textarea {
+    font-family: 'Roboto';
+    font-weight: normal;
+    width: 940px;
+    height: 257px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 1px #DDDDDD;
+    border-radius: 4px;
+}
+
+.add-preparation, .add-ingredient {
+    margin-top: 15px;
+    background: none;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: bold;
+    color: #6558C3;
+}
+
+.create-recipes {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.create-recipe-head-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+}
+
+.create-recipe-head-menu .btn-create {
+    background-color: #6558C3;
+    width: 139px;
+    height: 37px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    justify-self: end;
+}
+
+.author-and-title-create {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.ingredients-items-admin {
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+

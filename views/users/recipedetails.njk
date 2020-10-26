@@ -1,0 +1,56 @@
+{% extends 'users/layout.njk' %}
+
+{% block head %}
+    <title>Foodfy</title>
+{% endblock %}
+
+{% block content %}
+
+    <section class='recipe-details' id=''>
+        
+        <img src='{{recipes.image}}' alt='{{recipes.title}}'>
+       
+        <div class='title-and-author'>
+            <h1>{{recipes.title}}</h1>
+            <p>{{recipes.author}}</p>
+        </div>
+        <div class='ingredients'>
+            <div class='title-with-button'>
+                <h3>Ingredients</h3>
+                <button class='btn-show-hide'>HIDE</button>
+            </div>
+            <div class='card-text'>
+                <ul>
+                    {% for ingredients in recipes.ingredients %}
+                    <li>{{ingredients}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class='preparation-mode'>
+            <div class='title-with-button'>
+                <h3>How to prepare it</h3>
+                <button class='btn-show-hide'>HIDE</button>
+            </div>
+            <div class='card-text'>
+                <ul>
+                    {% for preparations in recipes.preparation %}
+                    <li>{{preparations}}</li>
+                    {% endfor%}
+                </ul>
+            </div>
+        </div>
+        <div class='add-information'>
+            <div class='title-with-button'>
+                <h3>Additional Information</h3>
+                <button class='btn-show-hide'>HIDE</button>
+            </div>
+            <div class='card-text'>
+                <p>{{recipes.information}}</p>
+            </div>
+        </div>
+    
+    </section>   
+  
+    <script src='/scripts.js'></script>
+{% endblock %}
